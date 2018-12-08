@@ -1,0 +1,12 @@
+#version 330
+
+in vec3 vp;
+uniform mat4 view; //without camera translation!! OR update points vector
+uniform mat4 proj; // could include a model matrix to translate it to camera
+uniform mat4 model;
+out vec3 texcoords;
+
+void main() {
+  texcoords = vp;
+  gl_Position = proj * view * model * vec4(vp, 1.0);
+}
