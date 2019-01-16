@@ -17,7 +17,5 @@ void main()
 	vec4 texturing = fragment_colour * temp;
 
 	gl_FragColor = mix(vec4(fogColour,1.0), texturing, visibility);
-
-	//gl_FragColor = fragment_colour * temp;
 }
 
